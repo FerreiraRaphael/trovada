@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  user: raphael
+  password: raphael
+
+development:
+  <<: *default
+  database: trovada-dev
+
+test:
+  <<: *default
+  database: trovada-test
+
+production:
+  <<: *default
+  host: db
+  database: trovada-prod
